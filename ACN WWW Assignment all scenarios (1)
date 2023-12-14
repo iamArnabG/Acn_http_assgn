@@ -1,0 +1,62 @@
+
+Without proxy: -
+
+
+
+Direct client to Umas website - python3 HTTP_Client.py 128.119.245.12 128.119.245.12:80 80 /
+
+direct client to server - python3 HTTP_Client.py 127.0.0.1 127.0.0.1:8080 8080 /hello.html
+
+direct browser to server - http://127.0.0.1:8080/hello.html
+
+
+With Proxy : -
+
+
+client to Umas website via proxy - python3 HTTP_Client.py 127.0.0.1 128.119.245.12:80 8888 /
+
+client to server via proxy - 127.0.0.1 127.0.0.1:8080 8888 /hello.html
+
+
+
+With Extended Proxy: -
+
+
+
+Proxy blocking website when requested - http://www.blockedwebsite.com
+
+Proxy repolacing censored word - http://www.example.com
+
+To show user statistics - python3 plot.py
+
+-------------------------------------------------------------------------------------------------------------------
+
+TO run on containers : -
+
+
+
+
+Without proxy: -
+
+
+
+Direct client to Umas website - python3 HTTP_Client.py 128.119.245.12 128.119.245.12:80 80 /
+
+
+direct client to server - python3 HTTP_Client.py 172.31.0.3 172.31.0.3:8080 8080 /hello.html
+
+
+
+
+
+
+With Proxy : -
+
+client to Umas website via proxy - python3 HTTP_Client.py 172.31.0.4 128.119.245.12:80 8888 /
+
+
+client to server via proxy - python3 HTTP_Client.py 172.31.0.4 172.31.0.3:8080 8888 /hello.html
+
+
+172.31.0.3 - bob11 (server)
+172.31.0.4 - trudy (proxy)
